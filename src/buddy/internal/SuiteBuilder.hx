@@ -25,7 +25,7 @@ class SuiteBuilder
 	{
 		switch(e.expr) {
 			// Fix autocomplete for should without parenthesis
-			case EDisplay(e2, isCall): switch e2 {
+			case EDisplay(e2, displayKind): switch e2 {
 				case macro $a.should:
 					var change = macro $a.should();
 					e2.expr = change.expr;
